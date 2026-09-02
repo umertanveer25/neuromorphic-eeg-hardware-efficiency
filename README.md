@@ -7,7 +7,7 @@
 [![ISO 14708-3 Safety](https://img.shields.io/badge/ISO_14708--3-Compliant_(%3C10_mW)-brightgreen.svg)]()
 [![Continuous Power Draw](https://img.shields.io/badge/Power_Draw-0.8514_%C2%B5W-purple.svg)]()
 
-> Official Repository for **"Sub-Microjoule Event-Driven Spiking Neural Networks for Responsive Neurostimulation: Hardware-Software Co-Design for Patient-Independent EEG Seizure Detection"** by **Umer Tanveer** (2026).
+> Official Repository for **"Sub-Microjoule Event-Driven Spiking Neural Networks for Responsive Neurostimulation: Hardware-Software Co-Design for Patient-Independent EEG Seizure Detection"** by **Umer Tanveer**, **Kiran Falak Sher**, and **Dr. Ghousia** (2026).
 
 ---
 
@@ -92,7 +92,7 @@ If you use this repository, codebase, or neuromorphic hardware profiler in your 
 
 ```bibtex
 @article{tanveer2026neuromorphic,
-  author    = {Tanveer, Umer},
+  author    = {Tanveer, Umer and Sher, Kiran Falak and Ghousia, Dr.},
   title     = {Sub-Microjoule Event-Driven Spiking Neural Networks for Responsive Neurostimulation: Hardware-Software Co-Design for Patient-Independent {EEG} Seizure Detection},
   journal   = {IEEE Transactions on Biomedical Circuits and Systems (TBICAS)},
   year      = {2026},
