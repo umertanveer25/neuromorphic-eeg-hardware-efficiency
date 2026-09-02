@@ -4,8 +4,6 @@ authors:
   - family-names: "Tanveer"
     given-names: "Umer"
     orcid: "https://orcid.org/0009-0002-8616-9538"
-  - family-names: "KFS"
-    given-names: "Hali"
 title: "Sub-Microjoule Event-Driven Spiking Neural Networks for Responsive Neurostimulation: Hardware-Software Co-Design for Patient-Independent EEG Seizure Detection"
 version: "1.0.0"
 date-released: "2026-09-02"

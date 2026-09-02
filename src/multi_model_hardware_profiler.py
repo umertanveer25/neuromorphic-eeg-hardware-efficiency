@@ -3,7 +3,7 @@ Comprehensive 8-Model Neuromorphic & Hardware Energy Profiler
 Compares 4 Base Paper Models (3 scalar features) vs 4 Our Models (37 multi-domain features)
 across Accuracy, Parameters, Ops/SOPs, Energy, Power Draw, and ISO 14708-3 Safety Compliance.
 
-Authors: Umer Tanveer and Hali KFS (2026)
+Author: Umer Tanveer (2026)
 """
 
 import torch

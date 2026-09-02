@@ -2,7 +2,7 @@
 Comprehensive 8-Model Leave-One-Patient-Out (LOPO) Evaluation Runner
 Evaluates 4 Base Paper Models (3-D SII) vs 4 Our Pipeline Models (37-D Multi-Domain) on CHB-MIT.
 
-Authors: Umer Tanveer and Hali KFS (2026)
+Author: Umer Tanveer (2026)
 """
 
 import numpy as np

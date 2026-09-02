@@ -2,7 +2,7 @@
 37-Dimensional Multi-Domain Feature Extraction Engine
 Extracts Sub-band DWT Energy Ratios, Hjorth Parameters, and Spectral Entropies from 23-Channel Scalp EEG.
 
-Authors: Umer Tanveer and Hali KFS (2026)
+Author: Umer Tanveer (2026)
 """
 
 import numpy as np

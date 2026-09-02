@@ -3,7 +3,7 @@ Neuromorphic SNN Hardware Co-Design & Energy Profiler
 Simulates Leaky Integrate-and-Fire (LIF) dynamics, Spike Sparsity, Synaptic Operations (SOP),
 and Sub-Microjoule Energy Profiles targeting 28nm CMOS / Intel Loihi 2 Neuromorphic Hardware.
 
-Authors: Umer Tanveer and Hali KFS (2026)
+Author: Umer Tanveer (2026)
 """
 
 import torch

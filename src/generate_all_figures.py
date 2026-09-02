@@ -2,7 +2,7 @@
 Nature-Style High-Resolution Figure Generator (300 DPI)
 Generates Figure 1 through Figure 5 for the Neuromorphic EEG Hardware Efficiency paper.
 
-Authors: Umer Tanveer and Hali KFS (2026)
+Author: Umer Tanveer (2026)
 """
 
 import os
