@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, f1_score
 
 def run_lopo_evaluation_benchmark():
     print("=====================================================================================")
-    print(" 🏆 EXPLICIT 8-MODEL LEAVE-ONE-PATIENT-OUT (LOPO) CROSS-VALIDATION BENCHMARK ")
+    print(" EXPLICIT 8-MODEL LEAVE-ONE-PATIENT-OUT (LOPO) CROSS-VALIDATION BENCHMARK ")
     print("=====================================================================================")
     
     models_summary = [
