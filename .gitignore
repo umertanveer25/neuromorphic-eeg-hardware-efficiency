@@ -1,7 +1,17 @@
+# LaTeX & Manuscript Exclusions
+*.pdf
+*.tex
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.zip
+
+# Python Bytecode
 __pycache__/
 *.pyc
-.DS_Store
-*.zip
-*.pdf
-.vscode/
-.idea/
