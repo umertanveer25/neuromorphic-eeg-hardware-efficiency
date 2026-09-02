@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or neuromorphic benchmark framework in your research, please cite it as below."
+authors:
+  - family-names: "Tanveer"
+    given-names: "Umer"
+    orcid: "https://orcid.org/0009-0002-8616-9538"
+  - family-names: "KFS"
+    given-names: "Hali"
+title: "Sub-Microjoule Event-Driven Spiking Neural Networks for Responsive Neurostimulation: Hardware-Software Co-Design for Patient-Independent EEG Seizure Detection"
+version: "1.0.0"
+date-released: "2026-09-02"
+repository-code: "https://github.com/umertanveer25/neuromorphic-eeg-hardware-efficiency"
+keywords:
+  - neuromorphic computing
+  - spiking neural networks
+  - snnTorch
+  - eeg seizure detection
+  - ISO 14708-3
+  - brain computer interfaces
