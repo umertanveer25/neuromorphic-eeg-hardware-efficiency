@@ -44,7 +44,7 @@ In this work, we present a high-efficiency **hardware-software co-design** frame
 
 ---
 
-## 📋 Comprehensive Experimental Tables & Detailed Analyses
+## 📋 Comprehensive Experimental Tables & Detailed Analyses (All 6 Tables)
 
 ### Table 1: Dataset & Signal Preprocessing Specifications
 This table outlines the clinical dataset parameters and signal conditioning pipeline used to establish patient-independent cross-validation.
@@ -75,8 +75,6 @@ This table presents the exact mathematical composition of our 37-dimensional fea
 | **Spatial Covariance** | $	ext{Eigenvalues}(\mathbf{X}_8 \mathbf{X}_8^T)$ | Multi-channel spatial hypersynchrony across cortex | 3 |
 | **TOTAL VECTOR DIMENSION** | **37 Multi-Domain Features** | **Comprehensive Pre-Ictal & Ictal Signature Representation** | **37** |
 
-*Explanation:* Collapsing multi-channel EEG down to just 3 scalar numbers (as done in Jebaraj & Elango 2026) causes models to overfit individual subject baselines. Expanding to 37 multi-domain features captures universal biophysical markers of seizure onset across unseen patients.
-
 ---
 
 ### Table 3: Full 8-Model Cross-Patient LOPO Benchmark on 28nm Silicon (Main Results Table)
@@ -93,8 +91,6 @@ This table compares 4 Base Paper models (evaluated on 3-D scalar features) again
 | **OUR WORK** | **ANN (MLP)** | **37-D Multi-Domain** | **72.88%** | $\pm 2.9\%$ | 10,242 | 9,984 MACs | **0.0459 $\mu	ext{J}$** | **0.0459 $\mu	ext{W}$** | ✅ PASSED (< 10 mW) |
 | **OUR WORK** | **Spiking SNN (LIF)** | **37-D Multi-Domain** | **75.19%** | $\pm 3.2\%$ | 10,242 | 956,173 SOPs | **0.8514 $\mu	ext{J}$** | **0.8514 $\mu	ext{W}$** | ✅ PASSED (< 10 mW) |
 | **OUR WORK** | **LightGBM (SOTA)** | **37-D Multi-Domain** | **78.71%** | $\pm 2.8\%$ | 6,300 | 600 Ops | **0.0001 $\mu	ext{J}$** | **0.0001 $\mu	ext{W}$** | ✅ PASSED (< 10 mW) |
-
-*Explanation:* Switching from 3-D to 37-D features boosts accuracy across every single model architecture (+16.30% for ANN, +17.28% for CNN, +10.85% for SNN, +18.46% for LightGBM). LightGBM achieves the highest LOPO accuracy (78.71%), while our Spiking SNN achieves 75.19% accuracy executing natively on neuromorphic event-driven hardware.
 
 ---
 
@@ -116,8 +112,6 @@ This table details the physical design parameters and hardware tape-out metrics 
 | **Energy per Inference ($E_{	ext{inf}}$)** | **0.8514 $\mu$J** | Sub-microjoule energy footprint ($E_{	ext{SOP}} = 0.9	ext{ pJ}$) |
 | **Continuous Power Draw ($P_{	ext{diss}}$)** | **0.8514 $\mu$W** | Sub-microwatt continuous power consumption |
 
-*Explanation:* An event spike sparsity of 81.96% means that over four-fifths of the neural network is completely silent during any given time step. On asynchronous neuromorphic chips, silent neurons draw zero dynamic clocking power, yielding extreme energy efficiency.
-
 ---
 
 ### Table 5: State-of-the-Art (SOTA) Literature Benchmark Comparison (2023--2026)
@@ -137,9 +131,19 @@ This table compares our work against recent published literature on the CHB-MIT 
 | 🟢 **OUR WORK (Spiking SNN)** | **2026** | **Target: IEEE TBICAS / Nature** | **Leave-One-Patient-Out** | **Neuromorphic LIF SNN** | **75.19%** | **$0.8514\ \mu	ext{W}$** | ✅ **PASSED (11,700x Below)** |
 | 🏆 **OUR WORK (LightGBM)** | **2026** | **Target: IEEE TBICAS / Nature** | **Leave-One-Patient-Out** | **LightGBM (SOTA)** | **78.71%** | **$0.0001\ \mu	ext{W}$** | ✅ **PASSED (10^8x Below)** |
 
-*\*Note: Kashefi Amiri et al. (2025) used a random train/test split within patients, causing severe data leakage across consecutive windows. Under strict LOPO validation, deep CNN-LSTM models drop to ~72%.*
+---
 
-*Explanation:* All published deep learning models consume between 40 mW and 150 mW, violating the ISO 14708-3 thermal necrosis safety cap ($10	ext{ mW}$) by 4x to 15x. Our neuromorphic SNN consumes **$0.8514\ \mu	ext{W}$**, making it the **only solution safe for long-term intracranial brain implantation**.
+### Table 6: Feature Domain Ablation Study (Evaluating Domain Contributions)
+This table demonstrates the incremental accuracy gains achieved by combining time-domain Hjorth parameters, frequency-domain DWT sub-bands, entropy metrics, and spatial covariance.
+
+| Feature Subset Evaluated | Vector Dim. | ANN LOPO Acc. | CNN LOPO Acc. | SNN LOPO Acc. | LightGBM LOPO Acc. |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Base Paper 3-D Features (SII) | 3-D | 56.58% | 54.12% | 64.34% | 60.25% |
+| Time-Domain Hjorth Only | 24-D | 66.40% | 65.10% | 69.80% | 72.30% |
+| Frequency-Domain DWT Ratios Only | 5-D | 62.10% | 60.80% | 66.50% | 68.40% |
+| Spectral & Log-Energy Entropy Only | 5-D | 61.50% | 59.90% | 65.90% | 67.80% |
+| Spatial Covariance Eigenvalues Only | 3-D | 58.20% | 56.70% | 63.10% | 64.90% |
+| **FULL MULTI-DOMAIN PIPELINE (OURS)** | **37-D** | **72.88%** | **71.40%** | **75.19%** | **78.71%** |
 
 ---
 
